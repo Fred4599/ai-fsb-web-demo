@@ -62,7 +62,7 @@ const panels = [
             How we help
           </div>
           <h2
-            class="text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.05] text-slate-900"
+            class="text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.05] text-slate-900"
             style="font-family: 'Playfair Display', serif;"
           >
             Programs built for <span
@@ -79,10 +79,10 @@ const panels = [
       </div>
     </div>
 
-    <div class="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-2 sm:gap-3 lg:gap-4 h-[800px] lg:h-[640px] z-10 group/acc">
+    <div class="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-2 sm:gap-3 lg:gap-4 min-h-[600px] h-auto lg:h-[640px] z-10 group/acc">
       {
         panels.map((p) => (
-          <div class="relative rounded-3xl lg:rounded-[2.5rem] overflow-hidden cursor-pointer flex-1 min-h-[100px] lg:min-h-0 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group/panel hover:flex-[5] border border-slate-200/50 shadow-sm hover:shadow-xl">
+          <div class="relative rounded-3xl lg:rounded-[2.5rem] overflow-hidden cursor-pointer flex-1 min-h-[140px] sm:min-h-[160px] lg:min-h-0 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group/panel hover:flex-[5] border border-slate-200/50 shadow-sm hover:shadow-xl">
             <img src={p.img} alt={p.title} class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-1000 ease-out group-hover/panel:scale-105" loading="lazy" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent opacity-80 group-hover/panel:opacity-90 transition-opacity duration-500" />
             <div class="absolute inset-0 p-6 lg:p-10 flex flex-col justify-end">
