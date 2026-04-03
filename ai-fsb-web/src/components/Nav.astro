@@ -1,0 +1,143 @@
+---
+import { site } from "../content/site";
+---
+
+<nav
+  id="site-nav"
+  class="fixed w-full z-50 border-b border-slate-200/60 top-0 right-0 left-0 bg-white/80 backdrop-blur-2xl transition-all duration-300"
+>
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="relative flex h-20 items-center justify-between">
+      <div class="flex items-center shrink-0 z-20">
+        <a href="#" class="flex items-center group transition-transform duration-300 active:scale-95">
+          <span
+            class="font-serif text-xl md:text-2xl font-medium text-slate-900 tracking-tight"
+            >{site.shortName}</span
+          >
+        </a>
+      </div>
+
+      <div class="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center z-10">
+        <div
+          class="flex items-center p-1 border border-slate-200/80 bg-white/80 backdrop-blur-md rounded-full shadow-[0_2px_8px_-2px_rgba(0,0,0,0.05)]"
+        >
+          {
+            site.nav.map((item) => (
+              <a
+                href={item.href}
+                class="px-5 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100/80 rounded-full transition-all duration-200"
+              >
+                {item.label}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+
+      <div class="flex gap-3 sm:gap-5 items-center ml-auto z-20">
+        <a
+          href={`tel:${site.contact.phoneTel}`}
+          class="hidden lg:block text-sm font-medium text-slate-600 hover:text-[#5B58F6] transition-colors px-2"
+        >
+          {site.contact.phone}
+        </a>
+
+        <a
+          href="#pricing"
+          class="group inline-flex items-center justify-center gap-2 transition-all duration-300 hover:bg-[#5B58F6] hover:shadow-[0_8px_20px_-6px_rgba(91,88,246,0.4)] hover:-translate-y-0.5 sm:px-6 text-sm font-medium text-white bg-slate-900 h-11 rounded-full pr-5 pl-5"
+        >
+          <span class="hidden sm:inline">Get started</span>
+          <span class="sm:hidden">Start</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+          >
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+
+        <button
+          id="mobile-menu-toggle"
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          class="lg:hidden flex items-center justify-center w-11 h-11 rounded-full border border-slate-200 text-slate-600 hover:bg-slate-50 transition-colors active:scale-95"
+        >
+          <svg
+            id="menu-icon-open"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="block"
+          >
+            <line x1="4" x2="20" y1="12" y2="12"></line>
+            <line x1="4" x2="20" y1="6" y2="6"></line>
+            <line x1="4" x2="20" y1="18" y2="18"></line>
+          </svg>
+
+          <svg
+            id="menu-icon-close"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="hidden"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="lg:hidden overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-out">
+      <div class="pb-5 pt-2">
+        <div
+          class="rounded-[1.5rem] border border-slate-200/80 bg-white/90 backdrop-blur-xl shadow-[0_12px_30px_-12px_rgba(15,23,42,0.08)] p-3 flex flex-col gap-1"
+        >
+          {
+            site.nav.map((item) => (
+              <a
+                href={item.href}
+                class="px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100 rounded-2xl transition-colors"
+              >
+                {item.label}
+              </a>
+            ))
+          }
+          <a
+            href={`tel:${site.contact.phoneTel}`}
+            class="px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100 rounded-2xl transition-colors sm:hidden"
+          >
+            Call {site.contact.phone}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  import { initMobileNav } from "../scripts/mobile-nav";
+  initMobileNav();
+</script>

@@ -1,0 +1,196 @@
+---
+---
+
+<section
+  id="solutions"
+  class="min-h-screen flex flex-col sm:p-8 antialiased selection:bg-indigo-100 selection:text-indigo-900 text-slate-800 pt-4 pr-4 pb-4 pl-4 items-center justify-center"
+  style="background: radial-gradient(circle at 50% -10%, #ffffff 0%, #f8fafc 100%)"
+>
+  <div class="max-w-7xl w-full flex flex-col items-center text-center mb-12 lg:mb-16 z-20 mt-8 lg:mt-0">
+    <div
+      class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6 text-xs text-indigo-700 bg-white/80 backdrop-blur-md"
+      style="box-shadow: inset 0 1px 2px rgba(255,255,255,1), 0 4px 12px rgba(99, 102, 241, 0.08), 0 1px 3px rgba(0,0,0,0.04); border: 1px solid rgba(255,255,255,0.9);"
+    >
+      <iconify-icon icon="solar:box-minimalistic-linear" width="16" height="16" stroke-width="1.5"></iconify-icon>
+      <span class="font-medium tracking-wide uppercase">Core systems</span>
+    </div>
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-slate-900 drop-shadow-sm">
+      Reliable automation <br class="hidden sm:block" />for real-world crews.
+    </h1>
+  </div>
+
+  <div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">
+    <!-- Card 1 -->
+    <div
+      class="relative h-[36rem] bg-white rounded-[2rem] overflow-hidden flex flex-col group transition-transform duration-500 hover:-translate-y-1"
+      style="box-shadow: inset 0 2px 4px rgba(255,255,255,1), inset 0 -1px 2px rgba(0,0,0,0.02), 0 20px 40px -10px rgba(99, 102, 241, 0.06), 0 10px 20px -5px rgba(0,0,0,0.03); border: 1px solid rgba(226, 232, 240, 0.9);"
+    >
+      <div class="px-8 pt-10 flex flex-col items-start relative z-30 pointer-events-none">
+        <div
+          class="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs text-slate-600 mb-6 bg-slate-50"
+          style="box-shadow: inset 0 1px 3px rgba(0,0,0,0.03), inset 0 -1px 2px rgba(255,255,255,1); border: 1px solid rgba(226, 232, 240, 0.7);"
+        >
+          <iconify-icon icon="solar:3d-cube-sphere-linear" width="16" height="16" class="text-indigo-600" stroke-width="1.5"
+          ></iconify-icon>
+          <span class="font-medium">Ideate</span>
+        </div>
+        <h2 class="text-2xl font-medium tracking-tight text-slate-900 mb-2">Lead intelligence</h2>
+        <p class="text-sm font-normal text-slate-500 leading-relaxed max-w-[95%]">
+          Visualize conversations, lead sources, and follow-up states so nothing slips through the cracks.
+        </p>
+      </div>
+
+      <div id="three-container" class="absolute inset-0 w-full h-full pt-32 cursor-move z-10"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-400/10 blur-[80px] rounded-full pointer-events-none z-0"></div>
+      <div class="absolute bottom-0 left-0 w-full h-32 z-20 pointer-events-none">
+        <div class="absolute inset-0 bg-gradient-to-t from-white via-white/90 to-transparent"></div>
+      </div>
+      <div class="absolute bottom-6 left-8 flex items-center gap-3 z-30">
+        <div class="relative flex h-2 w-2 items-center justify-center">
+          <div class="absolute h-full w-full rounded-full bg-indigo-400 opacity-75 animate-ping"></div>
+          <div class="relative h-1.5 w-1.5 rounded-full bg-indigo-500 shadow-[0_0_5px_rgba(99,102,241,0.6)]"></div>
+        </div>
+        <span class="text-[10px] font-medium text-slate-500 uppercase tracking-widest">Interactive WebGL</span>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div
+      class="relative h-[36rem] bg-white rounded-[2rem] flex flex-col overflow-hidden group transition-transform duration-500 hover:-translate-y-1"
+      style="box-shadow: inset 0 2px 4px rgba(255,255,255,1), inset 0 -1px 2px rgba(0,0,0,0.02), 0 20px 40px -10px rgba(99, 102, 241, 0.06), 0 10px 20px -5px rgba(0,0,0,0.03); border: 1px solid rgba(226, 232, 240, 0.9);"
+    >
+      <div class="px-8 pt-10 flex flex-col items-start text-left relative z-30 pointer-events-none">
+        <div
+          class="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs text-slate-600 mb-6 bg-slate-50"
+          style="box-shadow: inset 0 1px 3px rgba(0,0,0,0.03), inset 0 -1px 2px rgba(255,255,255,1); border: 1px solid rgba(226, 232, 240, 0.7);"
+        >
+          <iconify-icon icon="solar:cpu-bolt-linear" width="16" height="16" class="text-indigo-600" stroke-width="1.5"></iconify-icon>
+          <span class="font-medium">Construct</span>
+        </div>
+        <h2 class="text-2xl font-medium tracking-tight text-slate-900 mb-2">Your stack, connected</h2>
+        <p class="text-sm font-normal text-slate-500 leading-relaxed max-w-[95%]">
+          CRM, SMS, email, and booking tools working together—so follow-up happens even when you’re on a job site.
+        </p>
+      </div>
+
+      <div id="physics-container" class="absolute inset-0 w-full h-full z-10 overflow-hidden cursor-crosshair">
+        {
+          ["SMS", "Email", "CRM", "Calendar", "Reviews", "Web chat", "Meta ads", "Google LSA", "Call routing"].map(
+            (label) => (
+              <div
+                class="physics-tag absolute top-0 left-0 bg-white text-slate-700 px-3.5 py-2 rounded-2xl flex items-center gap-2 text-xs font-medium will-change-transform active:cursor-grabbing transition-colors"
+                style="box-shadow: rgba(0, 0, 0, 0.03) 0px 4px 12px, rgba(0, 0, 0, 0.02) 0px 1px 2px; border: 1px solid rgba(226, 232, 240, 0.9);"
+              >
+                <div class="w-5 h-5 rounded-full bg-orange-50 flex items-center justify-center">
+                  <iconify-icon icon="solar:flame-linear" width="12" height="12" class="text-orange-500" stroke-width="1.5"
+                  ></iconify-icon>
+                </div>
+                {label}
+              </div>
+            )
+          )
+        }
+      </div>
+      <div class="absolute bottom-0 left-0 w-full h-32 z-20 pointer-events-none">
+        <div class="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div
+      class="relative h-[36rem] bg-white rounded-[2rem] flex flex-col overflow-hidden group transition-transform duration-500 hover:-translate-y-1"
+      style="box-shadow: inset 0 2px 4px rgba(255,255,255,1), inset 0 -1px 2px rgba(0,0,0,0.02), 0 20px 40px -10px rgba(99, 102, 241, 0.06), 0 10px 20px -5px rgba(0,0,0,0.03); border: 1px solid rgba(226, 232, 240, 0.9);"
+    >
+      <div class="px-8 pt-10 flex flex-col items-start relative z-20">
+        <div
+          class="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs text-slate-600 mb-6 bg-slate-50"
+          style="box-shadow: inset 0 1px 3px rgba(0,0,0,0.03), inset 0 -1px 2px rgba(255,255,255,1); border: 1px solid rgba(226, 232, 240, 0.7);"
+        >
+          <iconify-icon icon="solar:rocket-2-linear" width="16" height="16" class="text-indigo-600" stroke-width="1.5"></iconify-icon>
+          <span class="font-medium">Scale</span>
+        </div>
+        <h2 class="text-2xl font-medium tracking-tight text-slate-900 mb-2">Speed that converts</h2>
+        <p class="text-sm font-normal text-slate-500 leading-relaxed max-w-[95%]">
+          Lightweight pages and fast follow-up sequences—so leads feel answered in seconds, not days.
+        </p>
+      </div>
+
+      <div class="relative w-full flex-1 mt-6 flex flex-col items-center justify-center">
+        <div
+          class="relative w-48 h-48 rounded-full flex items-center justify-center bg-slate-50"
+          style="box-shadow: -4px -4px 12px rgba(255,255,255,1), 4px 4px 12px rgba(0,0,0,0.03), inset -1px -1px 4px rgba(255,255,255,0.9), inset 1px 1px 4px rgba(0,0,0,0.02);"
+        >
+          <div
+            class="absolute inset-4 rounded-full bg-[#f8fafc]"
+            style="box-shadow: inset 3px 3px 6px rgba(0,0,0,0.03), inset -3px -3px 6px rgba(255,255,255,0.9);"
+          >
+          </div>
+          <svg
+            viewBox="0 0 100 100"
+            class="w-[82%] h-[82%] absolute z-10 -rotate-90"
+            style="filter: drop-shadow(0 2px 8px rgba(99, 102, 241, 0.2));"
+          >
+            <defs>
+              <linearGradient id="indigoGlowRing" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#818cf8"></stop>
+                <stop offset="100%" stop-color="#4f46e5"></stop>
+              </linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="46" fill="none" stroke="#e2e8f0" stroke-width="6" opacity="0.4"></circle>
+            <circle
+              id="health-ring"
+              cx="50"
+              cy="50"
+              r="46"
+              fill="none"
+              stroke="url(#indigoGlowRing)"
+              stroke-width="6"
+              stroke-dasharray="289"
+              stroke-dashoffset="289"
+              stroke-linecap="round"
+            >
+            </circle>
+          </svg>
+          <div
+            class="relative z-20 w-28 h-28 rounded-full bg-white flex flex-col items-center justify-center"
+            style="box-shadow: inset 1px 1px 3px rgba(0,0,0,0.01), inset -1px -1px 3px rgba(255,255,255,1), 0 2px 12px rgba(0,0,0,0.04);"
+          >
+            <span class="text-4xl font-medium tracking-tight text-slate-900 leading-none">100</span>
+            <span class="text-[10px] font-medium text-emerald-500 mt-1 uppercase tracking-widest">Health</span>
+          </div>
+        </div>
+        <div class="w-full px-8 mt-10 space-y-3 pb-8 relative z-20">
+          <div
+            class="flex items-center justify-between p-3 rounded-xl bg-white transition-colors hover:bg-slate-50"
+            style="box-shadow: 0 1px 3px rgba(0,0,0,0.02), inset 0 -1px 2px rgba(0,0,0,0.01); border: 1px solid rgba(226, 232, 240, 0.7);"
+          >
+            <div class="flex items-center gap-3">
+              <div class="w-7 h-7 rounded-full bg-slate-50 flex items-center justify-center border border-slate-200 text-slate-500">
+                <iconify-icon icon="solar:stopwatch-linear" width="14" height="14" stroke-width="1.5"></iconify-icon>
+              </div>
+              <span class="font-normal text-sm text-slate-700">Lead response time</span>
+            </div>
+            <span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">&lt; 2m</span>
+          </div>
+          <div
+            class="flex items-center justify-between p-3 rounded-xl bg-white transition-colors hover:bg-slate-50"
+            style="box-shadow: 0 1px 3px rgba(0,0,0,0.02), inset 0 -1px 2px rgba(0,0,0,0.01); border: 1px solid rgba(226, 232, 240, 0.7);"
+          >
+            <div class="flex items-center gap-3">
+              <div class="w-7 h-7 rounded-full bg-slate-50 flex items-center justify-center border border-slate-200 text-slate-500">
+                <iconify-icon icon="solar:cursor-square-linear" width="14" height="14" stroke-width="1.5"></iconify-icon>
+              </div>
+              <span class="font-normal text-sm text-slate-700">Booking fill rate</span>
+            </div>
+            <span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">High</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { initCoreEngineeringSection } from "../scripts/core-engineering";
+  initCoreEngineeringSection();
+</script>

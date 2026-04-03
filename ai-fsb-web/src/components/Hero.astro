@@ -1,0 +1,429 @@
+---
+import { site } from "../content/site";
+---
+
+<header class="lg:pt-32 lg:pb-20 overflow-hidden bg-[#FAFAFA] pt-24 pb-16 relative">
+  <canvas id="canvas-aura" class="absolute inset-0 z-0 w-full h-full pointer-events-none opacity-60"></canvas>
+
+  <div class="grid lg:grid-cols-2 max-w-7xl z-10 mx-auto px-6 relative gap-12 items-center">
+    <div class="max-w-2xl">
+      <p class="text-xs uppercase tracking-[0.28em] text-slate-400 font-medium mb-4">{site.sectionLabel}</p>
+      <h1 class="lg:text-8xl leading-[1.1] text-7xl font-light text-slate-900 tracking-tighter font-serif mb-8">
+        {site.hero.line1}
+        <br />
+        <span class="italic text-indigo-500">{site.hero.line2}</span>
+      </h1>
+
+      <p class="text-3xl text-slate-500 mb-10 leading-relaxed max-w-2xl font-thin tracking-tight">
+        {site.hero.sub}
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-5 sm:items-center items-start">
+        <a href="#pricing" class="group outline-none cursor-pointer relative" aria-label="Get started">
+          <div
+            class="absolute inset-0 -m-3 rounded-full bg-indigo-500/30 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out z-0"
+          >
+          </div>
+          <div
+            class="absolute inset-0 -m-6 rounded-full bg-indigo-600/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out z-0"
+          >
+          </div>
+          <div
+            class="absolute inset-0 -m-10 rounded-full bg-indigo-700/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0"
+          >
+          </div>
+
+          <div
+            class="relative z-10 flex items-center justify-center p-2 rounded-full transition-all duration-300 group-hover:shadow-purple-500/20"
+            style="background: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.1) 100%); box-shadow: inset 0 4px 6px rgba(255, 255, 255, 0.95), inset 0 -5px 8px rgba(0, 0, 0, 0.08), 0 12px 24px -6px rgba(0, 0, 0, 0.15), 0 4px 8px -4px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.4); backdrop-filter: blur(12px);"
+          >
+            <div
+              class="flex overflow-hidden transition-all duration-300 rounded-full pt-3.5 pr-12 pb-3.5 pl-12 relative items-center justify-center"
+              style="background: linear-gradient(180deg,#6366f1 0%,#4f46e5 100%); box-shadow: inset 0 2px 4px rgba(255,255,255,0.45), inset 0 -3px 6px rgba(0,0,0,0.35), 0 6px 14px rgba(79,70,229,0.35);"
+            >
+              <div
+                class="absolute top-0 left-[15%] right-[15%] h-[40%] bg-gradient-to-b from-white/30 to-transparent rounded-full blur-[1px]"
+              >
+              </div>
+              <span class="text-white text-base font-normal tracking-widest uppercase drop-shadow-md relative z-20 pointer-events-none">
+                {site.promo.headline}
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="#services"
+          class="relative group outline-none cursor-pointer px-8 py-[18px] rounded-full bg-white border border-slate-200 text-slate-700 text-base font-normal tracking-widest uppercase hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 flex items-center gap-2 shadow-sm hover:shadow active:scale-95"
+        >
+          Our services
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-5 h-5 text-slate-400 group-hover:text-slate-700 group-hover:translate-x-1 transition-all"
+          >
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hidden lg:block z-10 w-full h-[600px] relative">
+      <div class="-translate-y-1/2 lg:left-16 w-[860px] h-[540px] absolute top-1/2 left-8">
+        <div
+          class="absolute inset-0 bg-gradient-to-tr from-[#5B58F6]/20 via-transparent to-violet-300/10 blur-3xl rounded-full z-0 pointer-events-none -translate-x-10 translate-y-10"
+        >
+        </div>
+
+        <div
+          class="flex flex-col overflow-hidden z-10 transition-all duration-500 ease-out hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.14)] bg-gradient-to-b from-white to-slate-50 w-[740px] h-[540px] border-slate-200/60 border rounded-[2rem] absolute top-0 right-0 backdrop-blur-md"
+          style="box-shadow: 0 30px 60px -15px rgba(15,23,42,0.10), 0 10px 24px -10px rgba(15,23,42,0.08), inset 0 2px 4px rgba(255,255,255,0.8), inset 0 -1px 2px rgba(0,0,0,0.04); animation: dashSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards"
+        >
+          <div
+            class="h-12 bg-gradient-to-b from-slate-50/90 to-slate-100/50 border-b border-slate-200/80 flex items-center px-4 shrink-0 shadow-[0_1px_2px_rgba(0,0,0,0.03)]"
+          >
+            <div class="flex gap-2 w-20 pl-2">
+              <div
+                class="w-3 h-3 rounded-full bg-gradient-to-b from-slate-200 to-slate-300 shadow-[inset_0_1px_1px_rgba(255,255,255,0.8),0_1px_1px_rgba(0,0,0,0.1),inset_0_-1px_1px_rgba(0,0,0,0.05)]"
+              >
+              </div>
+              <div
+                class="w-3 h-3 rounded-full bg-gradient-to-b from-slate-200 to-slate-300 shadow-[inset_0_1px_1px_rgba(255,255,255,0.8),0_1px_1px_rgba(0,0,0,0.1),inset_0_-1px_1px_rgba(0,0,0,0.05)]"
+              >
+              </div>
+              <div
+                class="w-3 h-3 rounded-full bg-gradient-to-b from-slate-200 to-slate-300 shadow-[inset_0_1px_1px_rgba(255,255,255,0.8),0_1px_1px_rgba(0,0,0,0.1),inset_0_-1px_1px_rgba(0,0,0,0.05)]"
+              >
+              </div>
+            </div>
+
+            <div class="flex-1 flex justify-center">
+              <div
+                class="bg-slate-100/80 border border-slate-200/80 rounded-xl py-1.5 px-4 flex items-center gap-2 shadow-[inset_0_2px_4px_rgba(0,0,0,0.04),0_1px_0_rgba(255,255,255,1)] w-[290px] justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-3 h-3 text-slate-400"
+                >
+                  <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <span class="text-sm text-slate-500 font-light tracking-wide">crm.aiforsmall.bz</span>
+              </div>
+            </div>
+
+            <div class="w-20"></div>
+          </div>
+
+          <div class="flex-1 bg-transparent pt-8 pr-8 pb-8 pl-8">
+            <div class="flex items-start justify-between mb-8">
+              <div class="">
+                <div class="flex items-center gap-3 mb-3">
+                  <div
+                    class="w-2 h-2 rounded-full bg-[#5B58F6] shadow-[inset_0_1px_1px_rgba(255,255,255,0.5),0_0_12px_rgba(91,88,246,0.65)]"
+                  >
+                  </div>
+                  <span class="text-xs uppercase tracking-[0.24em] text-slate-400 font-medium">Live overview</span>
+                </div>
+                <h2 class="text-[2.15rem] leading-none font-normal text-slate-900 tracking-tight">Active leads</h2>
+              </div>
+
+              <div class="text-right">
+                <p class="text-xs uppercase tracking-[0.24em] text-slate-400 font-medium mb-2">Pipeline</p>
+                <p class="text-2xl font-normal tracking-tight text-slate-900">$84.2K</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-4 mb-8">
+              <div
+                class="rounded-2xl border border-slate-200/60 bg-gradient-to-b from-white to-slate-50/80 px-5 py-4 shadow-[0_3px_8px_rgba(0,0,0,0.03),inset_0_1px_0_rgba(255,255,255,1),inset_0_-1px_1px_rgba(0,0,0,0.02)]"
+              >
+                <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400 mb-2">Follow-ups</p>
+                <p class="text-xl text-slate-900 tracking-tight">$12.4K</p>
+              </div>
+              <div
+                class="rounded-2xl border border-slate-200/60 bg-gradient-to-b from-white to-slate-50/80 px-5 py-4 shadow-[0_3px_8px_rgba(0,0,0,0.03),inset_0_1px_0_rgba(255,255,255,1),inset_0_-1px_1px_rgba(0,0,0,0.02)]"
+              >
+                <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400 mb-2">Booked</p>
+                <p class="text-xl text-slate-900 tracking-tight">24 today</p>
+              </div>
+              <div
+                class="rounded-2xl border border-slate-200/60 bg-gradient-to-b from-white to-slate-50/80 px-5 py-4 shadow-[0_3px_8px_rgba(0,0,0,0.03),inset_0_1px_0_rgba(255,255,255,1),inset_0_-1px_1px_rgba(0,0,0,0.02)]"
+              >
+                <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400 mb-2">Territories</p>
+                <p class="text-xl text-slate-900 tracking-tight">4 zones</p>
+              </div>
+            </div>
+
+            <div
+              class="rounded-[1.75rem] border border-slate-200/60 bg-gradient-to-b from-white to-slate-50/30 overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.03),inset_0_1px_0_rgba(255,255,255,1)]"
+            >
+              <div
+                class="grid grid-cols-12 gap-4 px-6 py-4 text-[11px] uppercase tracking-[0.18em] text-slate-400 border-b border-slate-200/60 bg-slate-100/50 shadow-[inset_0_1px_0_rgba(255,255,255,0.5)]"
+              >
+                <div class="col-span-5">Customer</div>
+                <div class="col-span-3">Area</div>
+                <div class="col-span-2 text-right">Jobs</div>
+                <div class="col-span-2 text-right">LTV</div>
+              </div>
+
+              <div
+                class="grid grid-cols-12 gap-4 px-6 py-5 items-center bg-[#5B58F6]/[0.02] hover:bg-[#5B58F6]/[0.05] transition-colors border-b border-slate-100/80"
+              >
+                <div class="col-span-5 flex items-center gap-3">
+                  <div
+                    class="w-11 h-11 rounded-full bg-gradient-to-b from-amber-50 to-amber-100/60 border border-amber-200/50 flex items-center justify-center text-amber-600 shadow-[inset_0_2px_4px_rgba(255,255,255,0.9),0_2px_4px_rgba(0,0,0,0.04),inset_0_-1px_1px_rgba(0,0,0,0.05)]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-slate-900 text-[1.45rem] leading-none tracking-tight">Northstar</p>
+                    <p class="text-sm text-slate-400 mt-1">Remodel</p>
+                  </div>
+                </div>
+                <div class="col-span-3 text-slate-500 text-lg">Local</div>
+                <div class="col-span-2 text-right text-slate-900 text-lg">$12,450</div>
+                <div class="col-span-2 text-right text-slate-900 text-lg">$84,200</div>
+              </div>
+
+              <div
+                class="grid grid-cols-12 gap-4 px-6 py-5 items-center hover:bg-slate-50/70 transition-colors border-b border-slate-100/80"
+              >
+                <div class="col-span-5 flex items-center gap-3">
+                  <div
+                    class="w-11 h-11 rounded-full bg-gradient-to-b from-blue-50 to-blue-100/60 border border-blue-200/50 flex items-center justify-center text-blue-600 shadow-[inset_0_2px_4px_rgba(255,255,255,0.9),0_2px_4px_rgba(0,0,0,0.04),inset_0_-1px_1px_rgba(0,0,0,0.05)]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="w-5 h-5"
+                    >
+                      <path d="M10 2v2"></path>
+                      <path d="M14 2v2"></path>
+                      <path
+                        d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-slate-900 text-xl leading-none tracking-tight">Summit HVAC</p>
+                  </div>
+                </div>
+                <div class="col-span-3 text-slate-500 text-lg">Metro</div>
+                <div class="col-span-2 text-right text-slate-700 text-lg">$3,200</div>
+                <div class="col-span-2 text-right text-slate-700 text-lg">$15,800</div>
+              </div>
+
+              <div
+                class="grid grid-cols-12 gap-4 px-6 py-5 items-center hover:bg-slate-50/70 transition-colors border-b border-slate-100/80"
+              >
+                <div class="col-span-5 flex items-center gap-3">
+                  <div
+                    class="w-11 h-11 rounded-full bg-gradient-to-b from-emerald-50 to-emerald-100/60 border border-emerald-200/50 flex items-center justify-center text-emerald-600 shadow-[inset_0_2px_4px_rgba(255,255,255,0.9),0_2px_4px_rgba(0,0,0,0.04),inset_0_-1px_1px_rgba(0,0,0,0.05)]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="w-5 h-5"
+                    >
+                      <path d="M14.4 14.4 9.6 9.6"></path>
+                      <path
+                        d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-slate-900 text-xl leading-none tracking-tight">Blue Ridge</p>
+                  </div>
+                </div>
+                <div class="col-span-3 text-slate-500 text-lg">North</div>
+                <div class="col-span-2 text-right text-slate-700 text-lg">$8,900</div>
+                <div class="col-span-2 text-right text-slate-700 text-lg">$45,000</div>
+              </div>
+
+              <div class="grid grid-cols-12 gap-4 px-6 py-5 items-center hover:bg-slate-50/70 transition-colors">
+                <div class="col-span-5 flex items-center gap-3">
+                  <div
+                    class="w-11 h-11 rounded-full bg-gradient-to-b from-purple-50 to-purple-100/60 border border-purple-200/50 flex items-center justify-center text-purple-600 shadow-[inset_0_2px_4px_rgba(255,255,255,0.9),0_2px_4px_rgba(0,0,0,0.04),inset_0_-1px_1px_rgba(0,0,0,0.05)]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        d="M12 7.5a4.5 4.5 0 1 1 4.5 4.5M12 7.5A4.5 4.5 0 1 0 7.5 12M12 7.5V9m-4.5 3a4.5 4.5 0 1 0 4.5 4.5"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-slate-900 text-xl leading-none tracking-tight">Harbor Homes</p>
+                  </div>
+                </div>
+                <div class="col-span-3 text-slate-500 text-lg">Coastal</div>
+                <div class="col-span-2 text-right text-slate-700 text-lg">$5,100</div>
+                <div class="col-span-2 text-right text-slate-700 text-lg">$22,400</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.16)] cursor-pointer group bg-neutral-50 w-[340px] z-20 border-slate-200/60 border rounded-[2rem] px-7 py-7 absolute top-14 left-0"
+          style="box-shadow: 0 24px 48px -12px rgba(15,23,42,0.14), 0 10px 20px -10px rgba(15,23,42,0.08), inset 0 2px 2px rgba(255,255,255,1), inset 0 -1px 2px rgba(0,0,0,0.03); animation: cardSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;"
+        >
+          <div class="flex items-start justify-between mb-5">
+            <div class="flex items-center gap-3">
+              <div class="">
+                <h3
+                  class="text-lg font-medium tracking-tight text-slate-900 group-hover:text-indigo-600 transition-colors"
+                >
+                  New lead captured
+                </h3>
+                <p class="text-[10px] uppercase tracking-widest text-slate-400 font-medium mt-0.5">
+                  SMS summary sent
+                </p>
+              </div>
+            </div>
+            <div
+              class="w-6 h-6 rounded-full bg-gradient-to-b from-emerald-50 to-emerald-100/80 flex items-center justify-center text-emerald-600 border border-emerald-200/60 shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),0_1px_2px_rgba(0,0,0,0.05),inset_0_-1px_1px_rgba(0,0,0,0.05)]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="mb-2">
+            <p class="text-[2.15rem] font-medium tracking-tight text-slate-900 leading-none drop-shadow-sm">
+              $12,450.00
+            </p>
+            <div class="flex items-center gap-1.5 mt-2">
+              <span
+                class="flex items-center gap-1 text-xs font-medium text-emerald-700 bg-gradient-to-b from-emerald-50 to-emerald-100/50 px-1.5 py-0.5 rounded-md border border-emerald-200/50 shadow-[inset_0_1px_1px_rgba(255,255,255,0.9),0_1px_2px_rgba(0,0,0,0.04)]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10"
+                  height="10"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline
+                    points="16 7 22 7 22 13"></polyline></svg
+                >
+                14.2%
+              </span>
+              <span class="text-xs font-normal text-slate-400">vs last month</span>
+            </div>
+          </div>
+
+          <div class="relative h-16 w-full mb-5 -ml-1">
+            <canvas id="chart-starlight-hero"></canvas>
+          </div>
+
+          <div class="space-y-3 text-sm">
+            <div
+              class="flex justify-between items-center py-2.5 border-t border-slate-200/60 shadow-[inset_0_1px_0_rgba(255,255,255,0.5)]"
+            >
+              <span class="text-slate-500 font-normal">Lead ID</span>
+              <span class="font-medium text-slate-900 text-xs tracking-wide">#LEAD-8921</span>
+            </div>
+            <div
+              class="flex justify-between items-center py-2.5 border-t border-slate-200/60 shadow-[inset_0_1px_0_rgba(255,255,255,0.5)]"
+            >
+              <span class="text-slate-500 font-normal">Captured</span>
+              <span class="font-medium text-slate-900 text-xs">Today, 09:41 AM</span>
+            </div>
+            <div
+              class="flex justify-between items-center pt-2.5 border-t border-slate-200/60 shadow-[inset_0_1px_0_rgba(255,255,255,0.5)]"
+            >
+              <span class="text-slate-500 font-normal">Channel</span>
+              <div class="flex items-center gap-2">
+                <span class="font-medium text-slate-900 text-xs">Website chat</span>
+                <div
+                  class="px-1.5 py-0.5 bg-gradient-to-b from-slate-700 to-slate-800 border border-slate-900 rounded flex items-center justify-center shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_1px_2px_rgba(0,0,0,0.2),inset_0_-1px_1px_rgba(0,0,0,0.4)]"
+                >
+                  <span class="text-[9px] text-white font-medium tracking-wide">AI</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  import { initHeroCanvas } from "../scripts/hero-canvas";
+  import { initHeroReceiptChart } from "../scripts/hero-chart";
+
+  initHeroCanvas();
+  void initHeroReceiptChart("chart-starlight-hero");
+</script>

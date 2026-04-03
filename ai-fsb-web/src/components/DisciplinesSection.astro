@@ -1,0 +1,132 @@
+---
+const panels = [
+  {
+    n: "01",
+    title: "Talking website & AI assistant",
+    img: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/44196122-ca98-43d6-818d-64cda49233fd_800w.webp",
+    body: "Train an assistant on your business so it answers questions, captures leads, and texts you a summary—without rebuilding your whole site.",
+  },
+  {
+    n: "02",
+    title: "Reviews & reputation",
+    img: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/84c098ef-c275-40c3-b61a-533b403aec37_800w.webp",
+    body: "Automatically ask happy customers for Google reviews after each job so your good work outweighs the occasional bad day.",
+  },
+  {
+    n: "03",
+    title: "Missed-call & front desk",
+    img: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/variants/8e190d38-144d-4166-a5e8-b76b7a82d42a/1600w.png",
+    body: "If you can’t pick up, your AI front desk answers, qualifies the caller, and sends you the details instantly.",
+  },
+  {
+    n: "04",
+    title: "Follow-up & reactivation",
+    img: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/73cec214-1f3d-4c96-a480-b22ce84b98e8_800w.jpg",
+    body: "Sequences for quotes, past customers, and seasonal promos—so opportunities don’t go cold.",
+  },
+  {
+    n: "05",
+    title: "Growth & local visibility",
+    img: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/d5065317-adb2-4ad5-87cd-f7621819bd2b_800w.webp",
+    body: "SEO, listings, and campaigns engineered to bring in calls—scaled to your tier.",
+  },
+];
+---
+
+<section
+  class="min-h-screen bg-slate-50 relative flex items-center justify-center overflow-hidden"
+  style="font-family: 'Inter', sans-serif; background-image: radial-gradient(#d8d4fe 1px, transparent 1px); background-size: 40px 40px; background-position: center center"
+>
+  <div class="lg:px-28 lg:py-20 z-10 w-full max-w-[96rem] mr-auto ml-auto pt-16 pr-6 pb-16 pl-6 relative">
+    <div class="w-full mb-12 lg:mb-16">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+        <div class="max-w-2xl">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-50/90 border border-violet-200/60 text-violet-700 text-xs font-medium tracking-wide shadow-sm backdrop-blur-md mb-6"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            How we help
+          </div>
+          <h2
+            class="text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.05] text-slate-900"
+            style="font-family: 'Playfair Display', serif;"
+          >
+            Programs built for <span
+              class="italic text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-purple-600"
+              >real jobs</span
+            >
+          </h2>
+        </div>
+        <div class="md:w-[40%] md:text-right">
+          <p class="text-base lg:text-lg text-slate-500 font-normal leading-relaxed max-w-md ml-auto">
+            Five disciplines that work together—so you capture more leads, earn more reviews, and keep follow-up consistent.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-2 sm:gap-3 lg:gap-4 h-[800px] lg:h-[640px] z-10 group/acc">
+      {
+        panels.map((p) => (
+          <div class="relative rounded-3xl lg:rounded-[2.5rem] overflow-hidden cursor-pointer flex-1 min-h-[100px] lg:min-h-0 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group/panel hover:flex-[5] border border-slate-200/50 shadow-sm hover:shadow-xl">
+            <img src={p.img} alt={p.title} class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-1000 ease-out group-hover/panel:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent opacity-80 group-hover/panel:opacity-90 transition-opacity duration-500" />
+            <div class="absolute inset-0 p-6 lg:p-10 flex flex-col justify-end">
+              <div class="w-full">
+                <div class="flex items-center gap-4">
+                  <span class="text-white/50 font-mono text-xs tracking-[0.2em] hidden lg:block">{p.n}</span>
+                  <h3
+                    class="text-white text-2xl lg:text-3xl font-medium tracking-tight whitespace-nowrap truncate"
+                    style="font-family: 'Playfair Display', serif;"
+                  >
+                    {p.title}
+                  </h3>
+                </div>
+                <div class="grid grid-rows-[0fr] group-hover/panel:grid-rows-[1fr] transition-[grid-template-rows] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                  <div class="overflow-hidden min-h-0">
+                    <div class="pt-4 pb-1">
+                      <p class="text-white/80 text-sm lg:text-base font-light mb-6 max-w-md line-clamp-2 lg:line-clamp-3 leading-relaxed">
+                        {p.body}
+                      </p>
+                      <span class="inline-flex items-center gap-2 text-white text-xs lg:text-sm font-medium tracking-wide uppercase hover:text-violet-300 transition-colors">
+                        Learn more
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14" />
+                          <path d="m12 5 7 7-7 7" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

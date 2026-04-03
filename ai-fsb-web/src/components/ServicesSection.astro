@@ -1,0 +1,218 @@
+---
+import "../styles/services.css";
+---
+
+<section
+  id="services"
+  class="overflow-hidden sm:py-32 sm:px-8 text-slate-800 pt-24 pr-4 pb-24 pl-4 relative"
+  style="background-color: #e2e8f0;"
+>
+  <div class="max-w-7xl mx-auto relative z-10">
+    <div class="max-w-3xl mb-24 text-center mx-auto">
+      <h4
+        class="text-[#5B58F6] font-medium mb-8 text-sm tracking-widest uppercase inline-flex items-center justify-center px-6 py-2.5 rounded-full"
+        style="background: linear-gradient(180deg, #eef3f8 0%, #e4ebf3 100%); border: 1px solid rgba(255,255,255,0.7); box-shadow: 0 6px 16px rgba(15,23,42,0.05), inset 0 1px 0 rgba(255,255,255,0.9);"
+      >
+        <div
+          class="w-2 h-2 rounded-full mr-3"
+          style="background: #5B58F6; box-shadow: 0 0 6px rgba(91,88,246,0.35), inset 0 1px 1px rgba(255,255,255,0.55);"
+        >
+        </div>
+        What we automate
+      </h4>
+
+      <h2 class="text-5xl lg:text-6xl font-light tracking-tight text-slate-800 mb-8 font-serif skeuo-text-raised">
+        We do all the tech work—<span class="italic text-[#5B58F6]">you get the benefits</span>
+      </h2>
+
+      <p class="text-xl text-slate-500 font-thin leading-relaxed max-w-2xl mx-auto skeuo-text-engraved">
+        Your assistant answers questions, captures leads, and texts you a full summary—without new software to learn or
+        complicated logins.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-16 gap-x-16 gap-y-16 items-center">
+      <div class="relative z-20">
+        <div class="flex items-center gap-6 mb-10">
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center relative skeuo-plate">
+            <div
+              class="absolute inset-1.5 rounded-xl"
+              style="box-shadow: inset 0 1px 0 rgba(255,255,255,0.75), inset 0 -1px 0 rgba(148,163,184,0.10);"
+            >
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-6 h-6 text-[#5B58F6]"
+            >
+              <path
+                d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"
+              ></path>
+              <path d="M20 2v4"></path>
+              <path d="M22 4h-4"></path>
+              <circle cx="4" cy="20" r="2"></circle>
+            </svg>
+          </div>
+          <span class="font-light text-3xl text-slate-800 font-serif skeuo-text-raised">Talking website</span>
+        </div>
+
+        <h3 class="text-4xl font-light text-slate-800 tracking-tight mb-6 font-serif skeuo-text-raised leading-tight">
+          Answers, captures, and follows up—automatically
+        </h3>
+
+        <p class="text-lg text-slate-500 font-thin mb-12 leading-relaxed skeuo-text-engraved">
+          We train your assistant on your business so it can collect name, phone, email, and reason for the call—then
+          instantly text you a summary. No website overhaul required.
+        </p>
+
+        <div class="grid grid-cols-2 gap-y-6 text-sm font-medium mb-14 skeuo-well p-8 rounded-[2.5rem]">
+          {
+            [
+              "Lead capture & CRM handoff",
+              "SMS summaries to your phone",
+              "Review requests after jobs",
+              "Optional AI front desk",
+            ].map((label, i) => (
+              <div class="flex items-center gap-4 group cursor-default">
+                <div
+                  class="w-4 h-4 rounded-full relative flex items-center justify-center"
+                  style="background: linear-gradient(180deg,#e6edf4 0%, #d7e0ea 100%); box-shadow: inset 0 1px 1px rgba(255,255,255,0.8), inset 0 -1px 1px rgba(148,163,184,0.2);"
+                >
+                  <div
+                    class="w-2 h-2 rounded-full bg-[#10b981] animate-led-pulse"
+                    style={`animation-delay: ${i * 0.5}s; box-shadow: 0 0 5px rgba(16,185,129,0.35), inset 0 1px 1px rgba(255,255,255,0.55);`}
+                  />
+                </div>
+                <span class="text-slate-600 skeuo-text-raised group-hover:text-[#5B58F6] transition-colors">{label}</span>
+              </div>
+            ))
+          }
+        </div>
+
+        <a
+          href="#pricing"
+          class="skeuo-btn text-base font-medium text-[#5B58F6] rounded-full pt-4 pr-8 pb-4 pl-8 inline-flex items-center gap-3 group"
+        >
+          Explore plans
+          <div
+            class="w-7 h-7 rounded-full flex items-center justify-center"
+            style="background: linear-gradient(180deg, #eef3f8 0%, #e1e8f0 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,0.85), 0 2px 5px rgba(15,23,42,0.06);"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-4 h-4 group-hover:translate-x-1 transition-transform text-[#5B58F6]"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      <div
+        class="machine-root is-active aspect-[4/5] z-10 overflow-hidden bg-white w-full max-w-[460px] border-slate-200/80 border rounded-[2rem] mr-auto ml-auto pt-2.5 pr-2.5 pb-2.5 pl-2.5 relative shadow-[0_8px_30px_rgba(15,23,42,0.04)]"
+        id="brand-machine"
+      >
+        <div
+          class="machine-board overflow-hidden bg-slate-50 w-full h-full rounded-[1.5rem] p-4 relative border border-slate-100 shadow-inner"
+        >
+          <div
+            class="machine-board-glow absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] h-[260px] rounded-full pointer-events-none z-0"
+            style="background: radial-gradient(circle, rgba(129,140,248,0.22) 0%, rgba(139,92,246,0.16) 28%, rgba(99,102,241,0.10) 52%, rgba(99,102,241,0) 74%);"
+          >
+          </div>
+
+          <div
+            class="opacity-[0.03] absolute inset-0 pointer-events-none z-0"
+            style="background-image: linear-gradient(#0f172a 1px, transparent 1px), linear-gradient(90deg, #0f172a 1px, transparent 1px); background-size: 24px 24px;"
+          >
+          </div>
+
+          <svg class="absolute inset-0 w-full h-full pointer-events-none z-10" viewBox="0 0 440 580" preserveAspectRatio="xMidYMid meet">
+            <g class="machine-module-a">
+              <path d="M 110 110 C 220 110, 220 210, 310 210" stroke="#e2e8f0" stroke-width="6" fill="none" stroke-linecap="round"></path>
+              <path class="machine-wire-core" d="M 110 110 C 220 110, 220 210, 310 210" stroke="#cbd5e1" stroke-width="2" fill="none" stroke-linecap="round"></path>
+              <path class="machine-wire-pulse animate-skeuo-flow" d="M 110 110 C 220 110, 220 210, 310 210" stroke="#8b5cf6" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="15 45"></path>
+            </g>
+            <g class="machine-module-b">
+              <path d="M 310 210 C 220 210, 220 340, 110 340" stroke="#e2e8f0" stroke-width="6" fill="none" stroke-linecap="round"></path>
+              <path class="machine-wire-core" d="M 310 210 C 220 210, 220 340, 110 340" stroke="#cbd5e1" stroke-width="2" fill="none" stroke-linecap="round"></path>
+              <path class="machine-wire-pulse animate-skeuo-flow" d="M 310 210 C 220 210, 220 340, 110 340" stroke="#8b5cf6" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="15 45" style="animation-delay: 0.8s;"></path>
+            </g>
+            <g class="machine-module-a">
+              <path d="M 110 340 C 220 340, 220 470, 310 470" stroke="#e2e8f0" stroke-width="6" fill="none" stroke-linecap="round"></path>
+              <path class="machine-wire-core" d="M 110 340 C 220 340, 220 470, 310 470" stroke="#cbd5e1" stroke-width="2" fill="none" stroke-linecap="round"></path>
+              <path class="machine-wire-pulse animate-skeuo-flow" d="M 110 340 C 220 340, 220 470, 310 470" stroke="#8b5cf6" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="15 45" style="animation-delay: 1.6s;"></path>
+            </g>
+
+            <foreignObject x="34" y="54" width="148" height="104">
+              <div class="w-full h-full bg-white rounded-2xl border border-slate-200/80 shadow-sm flex flex-col items-center justify-center gap-3 relative overflow-hidden">
+                <span class="text-[10px] font-normal tracking-widest uppercase text-slate-400">Strategy</span>
+                <div class="flex items-center gap-3">
+                  <div class="machine-led w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,0.5)]"></div>
+                  <button type="button" id="machine-toggle" aria-pressed="true" class="strategy-switch w-10 h-5 rounded-full relative border shadow-inner pointer-events-auto" style="background: linear-gradient(180deg, #e0e7ff 0%, #c7d2fe 100%); border-color: #c7d2fe;">
+                    <div class="machine-toggle-glow absolute inset-[-4px] rounded-full bg-[radial-gradient(circle,rgba(129,140,248,0.42)_0%,rgba(139,92,246,0.18)_45%,rgba(99,102,241,0)_75%)]"></div>
+                    <div class="machine-toggle-knob w-5 h-5 rounded-full absolute top-0 bg-white border" style="right: 0;"></div>
+                  </button>
+                </div>
+              </div>
+            </foreignObject>
+
+            <foreignObject x="250" y="170" width="148" height="104">
+              <div class="w-full h-full bg-white rounded-2xl border border-slate-200/80 shadow-sm flex flex-col items-center justify-center gap-3 relative overflow-hidden">
+                <span class="text-[10px] font-normal tracking-widest uppercase text-slate-400">Design</span>
+                <div class="w-12 h-12 rounded-full flex items-center justify-center border border-slate-100 bg-slate-50">
+                  <div class="machine-dial-rotor w-8 h-8 rounded-full border border-slate-200 bg-white relative shadow-sm">
+                    <div class="w-1.5 h-1.5 rounded-full absolute top-1 left-1/2 -translate-x-1/2 bg-indigo-500"></div>
+                  </div>
+                </div>
+              </div>
+            </foreignObject>
+
+            <foreignObject x="34" y="302" width="148" height="104">
+              <div class="w-full h-full bg-white rounded-2xl border border-slate-200/80 shadow-sm flex flex-col items-center justify-center gap-3 relative overflow-hidden">
+                <span class="text-[10px] font-normal tracking-widest uppercase text-slate-400">Develop</span>
+                <div class="w-24 h-9 rounded-lg bg-slate-950 flex items-center justify-center border border-slate-800 shadow-inner">
+                  <span class="machine-build-text font-mono text-[10px] text-emerald-400">_ BUILD</span>
+                </div>
+              </div>
+            </foreignObject>
+
+            <foreignObject x="250" y="430" width="148" height="104">
+              <div class="w-full h-full bg-white rounded-2xl border border-slate-200/80 shadow-sm flex flex-col items-center justify-center gap-3 relative overflow-hidden">
+                <span class="text-[10px] font-normal tracking-widest uppercase text-slate-400">Launch</span>
+                <div class="w-12 h-12 rounded-full flex items-center justify-center border border-slate-100 bg-slate-50">
+                  <div class="machine-launch-core w-8 h-8 rounded-full flex items-center justify-center bg-gradient-to-tr from-amber-400 to-amber-500 shadow-[0_0_12px_rgba(245,158,11,0.4)]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" class="text-white">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </foreignObject>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { initBrandMachine } from "../scripts/brand-machine";
+  initBrandMachine();
+</script>

@@ -1,0 +1,7 @@
+.DS_Store
+old-website-copy/
+
+# Astro app
+ai-fsb-web/node_modules/
+ai-fsb-web/dist/
+ai-fsb-web/.astro/

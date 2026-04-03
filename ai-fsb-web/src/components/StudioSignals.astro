@@ -1,0 +1,131 @@
+---
+---
+
+<section
+  class="antialiased min-h-screen flex flex-col overflow-hidden text-slate-900 font-sans"
+  style="background: radial-gradient(circle at top, rgba(99,102,241,0.08) 0%, rgba(99,102,241,0.02) 28%, transparent 55%), linear-gradient(180deg, #f8fafc 0%, #eef2f7 42%, #e8edf5 100%); mask-image: linear-gradient(180deg, transparent, black 0%, black 90%, transparent); -webkit-mask-image: linear-gradient(180deg, transparent, black 0%, black 90%, transparent);"
+>
+  <div class="max-w-6xl mx-auto w-full flex-grow flex flex-col border-x border-slate-200/70 relative bg-white/20 backdrop-blur-[2px]">
+    <div class="absolute -top-[3px] -left-[3px] w-1.5 h-1.5 bg-indigo-400/70 z-20"></div>
+    <div class="absolute -top-[3px] -right-[3px] w-1.5 h-1.5 bg-indigo-400/70 z-20"></div>
+
+    <header class="pt-24 pb-20 px-6 text-center border-b border-slate-200/70 relative z-10">
+      <div
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8 bg-white/70 border border-slate-200/80 shadow-[0_8px_20px_rgba(15,23,42,0.04)] backdrop-blur-md text-[11px] uppercase tracking-[0.22em] text-indigo-500 font-medium"
+      >
+        <span class="w-2 h-2 rounded-full bg-indigo-500 shadow-[0_0_12px_rgba(99,102,241,0.45)]"></span>
+        Signals
+      </div>
+      <h2 class="text-5xl md:text-6xl font-normal tracking-tight text-slate-900 max-w-4xl mx-auto leading-[1.02]">
+        The systems behind <br />
+        <span class="italic text-indigo-500">modern local businesses</span>
+      </h2>
+      <p class="mt-8 max-w-2xl mx-auto text-lg text-slate-500 leading-relaxed font-light">
+        From lead capture to reviews and follow-up, we connect the pieces with clarity and speed.
+      </p>
+      <div class="absolute -bottom-[3px] -left-[3px] w-1.5 h-1.5 bg-indigo-400/70 z-20"></div>
+      <div class="absolute -bottom-[3px] -right-[3px] w-1.5 h-1.5 bg-indigo-400/70 z-20"></div>
+    </header>
+
+    <main id="studio-motion-zone" class="flex-grow relative overflow-hidden min-h-[640px] lg:min-h-[720px]">
+      <div class="absolute top-6 right-6 flex gap-2 z-20">
+        <button
+          id="pauseBtn"
+          type="button"
+          class="w-9 h-9 flex items-center justify-center bg-white/60 hover:bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-xl text-slate-600 transition-all cursor-pointer shadow-sm"
+          aria-label="Pause animation"
+        >
+          <iconify-icon icon="solar:pause-linear" width="16" height="16" style="stroke-width: 1.5;"></iconify-icon>
+        </button>
+        <button
+          type="button"
+          class="w-9 h-9 flex items-center justify-center bg-white/60 hover:bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-xl text-slate-600 transition-all cursor-pointer shadow-sm"
+          aria-label="Settings"
+        >
+          <iconify-icon icon="solar:tuning-2-linear" width="16" height="16" style="stroke-width: 1.5;"></iconify-icon>
+        </button>
+      </div>
+
+      <div class="relative z-10 grid lg:grid-cols-[260px_minmax(0,1fr)_260px] h-full min-h-[640px] lg:min-h-[720px]">
+        <div class="border-r border-slate-200/70 bg-white/10 relative z-10">
+          <div class="grid grid-rows-2 h-full divide-y divide-slate-200/70">
+            <div
+              class="studio-stat group flex flex-col items-center justify-center text-center px-8 py-16 relative transition-all duration-500 hover:bg-white/35 hover:backdrop-blur-md cursor-pointer overflow-hidden"
+            >
+              <div
+                class="relative z-10 text-5xl font-normal text-slate-900 tracking-tight group-hover:text-indigo-500 transition-colors duration-300"
+              >
+                <span class="countup" data-count="120" data-suffix="+">0</span>
+              </div>
+              <div
+                class="relative z-10 mt-4 text-base text-slate-500 max-w-[220px] leading-relaxed group-hover:text-slate-600 transition-colors duration-300"
+              >
+                playbooks shipped for local service brands
+              </div>
+            </div>
+            <div
+              class="studio-stat group flex flex-col items-center justify-center text-center px-8 py-16 relative transition-all duration-500 hover:bg-white/35 hover:backdrop-blur-md cursor-pointer overflow-hidden"
+            >
+              <div
+                class="relative z-10 text-5xl font-normal text-slate-900 tracking-tight group-hover:text-indigo-500 transition-colors duration-300"
+              >
+                <span class="countup" data-count="99.9" data-suffix="%">0</span>
+              </div>
+              <div
+                class="relative z-10 mt-4 text-base text-slate-500 max-w-[220px] leading-relaxed group-hover:text-slate-600 transition-colors duration-300"
+              >
+                consistency across SMS, email, and call flows
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative overflow-hidden min-h-[420px] lg:min-h-full">
+          <canvas class="block z-0 w-full h-full absolute inset-0" id="networkCanvas"></canvas>
+          <div
+            class="absolute inset-0 pointer-events-none z-10"
+            style="background: radial-gradient(circle at 50% 100%, rgba(255,255,255,0.14), transparent 40%), linear-gradient(to top, rgba(255,255,255,0.10), transparent 30%);"
+          >
+          </div>
+        </div>
+
+        <div class="border-l border-slate-200/70 bg-white/10 relative z-10">
+          <div class="grid grid-rows-2 h-full divide-y divide-slate-200/70">
+            <div
+              class="studio-stat group flex flex-col items-center justify-center text-center px-8 py-16 relative transition-all duration-500 hover:bg-white/35 hover:backdrop-blur-md cursor-pointer overflow-hidden"
+            >
+              <div class="relative z-10 text-5xl font-normal text-indigo-500 tracking-tight">
+                <span class="countup" data-count="8" data-suffix="+">0</span>
+              </div>
+              <div
+                class="relative z-10 mt-4 text-base text-slate-500 max-w-[220px] leading-relaxed group-hover:text-slate-600 transition-colors duration-300"
+              >
+                automations unified in one workflow
+              </div>
+            </div>
+            <div
+              class="studio-stat group flex flex-col items-center justify-center text-center px-8 py-16 relative transition-all duration-500 hover:bg-white/35 hover:backdrop-blur-md cursor-pointer overflow-hidden"
+            >
+              <div class="relative z-10 text-5xl font-normal text-indigo-500 tracking-tight">
+                <span class="countup" data-count="24" data-suffix="/7">0</span>
+              </div>
+              <div
+                class="relative z-10 mt-4 text-base text-slate-500 max-w-[220px] leading-relaxed group-hover:text-slate-600 transition-colors duration-300"
+              >
+                iteration windows for campaigns and promos
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute -bottom-[3px] -left-[3px] w-1.5 h-1.5 bg-indigo-400/70 z-20"></div>
+      <div class="absolute -bottom-[3px] -right-[3px] w-1.5 h-1.5 bg-indigo-400/70 z-20"></div>
+    </main>
+  </div>
+</section>
+
+<script>
+  import { initStudioSignals } from "../scripts/studio-signals";
+  initStudioSignals();
+</script>
